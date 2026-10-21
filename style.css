@@ -45,12 +45,13 @@ li {
 }
 
 .container {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1240px, calc(100% - 32px));
   margin: 0 auto;
 }
 
 .section {
   padding: 90px 0;
+  padding: clamp(64px, 7vw, 90px) 0;
 }
 
 .alternate-section {
@@ -230,14 +231,17 @@ li {
 .hero {
   position: relative;
   min-height: 660px;
+  min-height: clamp(580px, 72svh, 820px);
   display: flex;
   align-items: center;
+  background-color: #202020;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-home {
-  background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85");
+  background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80");
   background-position: center 56%;
 }
 
@@ -292,6 +296,7 @@ li {
 .card-grid {
   display: grid;
   gap: 24px;
+  gap: clamp(16px, 2vw, 24px);
 }
 
 .service-grid,
@@ -553,14 +558,18 @@ li {
 .page-hero {
   position: relative;
   min-height: 480px;
+  min-height: clamp(440px, 56svh, 620px);
   display: flex;
   align-items: center;
+  background-color: #202020;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-about {
   min-height: 540px;
+  min-height: clamp(480px, 62svh, 680px);
   background-position: center;
 }
 
@@ -886,8 +895,19 @@ li {
 }
 
 @media (max-width: 680px) {
-  .section {
-    padding: 72px 0;
+  .hero {
+    min-height: 560px;
+    min-height: clamp(520px, 82svh, 700px);
+  }
+
+  .page-hero {
+    min-height: 480px;
+    min-height: clamp(440px, 72svh, 580px);
+  }
+
+  .hero-about {
+    min-height: 540px;
+    min-height: clamp(480px, 78svh, 640px);
   }
 
   .service-grid,
@@ -912,11 +932,8 @@ li {
     width: 100%;
   }
 
-  .hero {
-    min-height: 560px;
-  }
-
   .hero-home {
+    background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=75");
     background-position: 58% center;
   }
 
@@ -960,5 +977,26 @@ li {
 
   .about-commitment .feature-item:nth-child(n) {
     grid-column: auto;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 960px) {
+  .hero-home {
+    background-position: 58% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
