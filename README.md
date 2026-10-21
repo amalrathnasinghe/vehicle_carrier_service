@@ -1,6 +1,6 @@
-# Sumith Car Towing Website
+# Rapid Rescue Service Website
 
-This project is a static three-page website for Sumith Car Towing using only HTML5 and CSS3.
+This project is a static three-page website for Rapid Rescue Service using only HTML5 and CSS3.
 
 ## Project structure
 
