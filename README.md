@@ -37,4 +37,4 @@ Then open `http://localhost:8000` in a browser.
 
 - No JavaScript, database, backend, or framework is required.
 - The site is responsive for mobile, tablet, and desktop screens.
-- Phone links use `tel:0777771600` as required.
+- Phone links use `tel:+94713771600` and `tel:+94714771600`.
