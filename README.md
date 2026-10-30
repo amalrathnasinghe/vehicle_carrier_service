@@ -1,16 +1,21 @@
-# Rapid Rescue Service Website
+# VehicleBreakdown.lk Website
 
-This project is a static three-page website for Rapid Rescue Service using only HTML5 and CSS3.
+This project is a static three-page website for VehicleBreakdown.lk using only HTML5 and CSS3.
 
 ## Project structure
 
 Save the following files directly inside the project root folder:
 
 - `index.html`
+- `index.md` — documentation for the home page
 - `services.html`
+- `services.md` — documentation for the Services & Coverage page
 - `about.html`
+- `about.md` — documentation for the About page
 - `style.css`
 - `README.md`
+
+Keep each page's Markdown file in sync with its matching HTML file: `index.html` with `index.md`, `services.html` with `services.md`, and `about.html` with `about.md`. Update the paired Markdown file whenever that page's content, links, contact details, or images change.
 
 ## Open and test locally
 
